@@ -1,9 +1,10 @@
-from engine.main import open_url
+#Example cli for libFXML
+from engine.main import open_fxml_url
 
 if __name__ == "__main__":
-    base_url = input("Enter fxml url: ")
+    url = input("Enter fxml url: ")
     while True:
-        page = open_url(base_url)
+        page = open_fxml_url(url)
         
         print("Urls:")
 
@@ -11,4 +12,4 @@ if __name__ == "__main__":
             print(f'{i} {page.items[i]}')
 
         selected = int(input("Select url: "))
-        base_url = page.items[selected].url
+        url = page.items[selected].url

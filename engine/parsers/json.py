@@ -60,7 +60,7 @@ class JSONParser:
         return FXMLItem(
             title=item.get("title"),
             logo=item.get("logo_30x30"),
-            description=str(item.get("description")),
+            description=item.get("description"),
             kind=kind,
             url=url
         )

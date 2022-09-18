@@ -2,23 +2,15 @@ from .utils import clear_styles
 
 class FXMLItem:
     def __init__(self, title: str, logo: str, kind: int, description="", submenu=None, url="") -> None:
-        self.__title = clear_styles(title)
-        self.__logo = logo
+        self.title = clear_styles(title)
+        self.logo = logo
         self.kind = kind
         self.description = clear_styles(description)
         self.submenu = submenu
         self.url = url
 
-    @property
-    def logo(self):
-        return self.__logo
-
-    @property
-    def title(self):
-        return self.__title
-
     def __str__(self) -> str:
-        return str([self.__title, self.kind, self.url])
+        return str([self.title, self.kind, self.url])
 
         
 
